@@ -24,9 +24,16 @@
     "postcss": "^8.4.32",
     "autoprefixer": "^10.4.16",
     "gh-pages": "^6.1.0",
-    "vercel": "^33.0.0"
+    "vercel": "^33.0.0",
+    "terser": "^5.27.0"
   },
-  "keywords": ["calculator", "vue3", "vite", "math", "financial"],
+  "keywords": [
+    "calculator",
+    "vue3",
+    "vite",
+    "math",
+    "financial"
+  ],
   "author": "",
   "license": "MIT"
 }
