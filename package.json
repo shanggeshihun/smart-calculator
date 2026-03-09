@@ -1,0 +1,32 @@
+{
+  "name": "smart-calculator",
+  "version": "1.0.0",
+  "description": "多功能智能计算器 - 支持基础运算、科学计算、财务计算和单位换算",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy:github": "npm run build && gh-pages -d dist",
+    "deploy:vercel": "vercel --prod"
+  },
+  "dependencies": {
+    "vue": "^3.4.0",
+    "vue-router": "^4.2.5",
+    "pinia": "^2.1.7",
+    "mathjs": "^12.2.1",
+    "decimal.js": "^10.4.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.0",
+    "vite": "^5.0.0",
+    "tailwindcss": "^3.4.0",
+    "postcss": "^8.4.32",
+    "autoprefixer": "^10.4.16",
+    "gh-pages": "^6.1.0",
+    "vercel": "^33.0.0"
+  },
+  "keywords": ["calculator", "vue3", "vite", "math", "financial"],
+  "author": "",
+  "license": "MIT"
+}
