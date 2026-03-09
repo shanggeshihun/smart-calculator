@@ -28,23 +28,20 @@
       <BasicCalculator v-if="currentTab === 'basic'" />
       
       <!-- 科学计算器 -->
-      <div v-else-if="currentTab === 'scientific'" class="text-center py-8 text-gray-500">
-        科学计算器开发中...
-      </div>
+      <ScientificCalculator v-else-if="currentTab === 'scientific'" />
       
       <!-- 财务计算器 -->
-      <div v-else-if="currentTab === 'financial'" class="text-center py-8 text-gray-500">
-        财务计算器开发中...
-      </div>
+      <FinancialCalculator v-else-if="currentTab === 'financial'" />
       
       <!-- 单位换算 -->
-      <div v-else-if="currentTab === 'converter'" class="text-center py-8 text-gray-500">
-        单位换算开发中...
-      </div>
+      <ConverterCalculator v-else-if="currentTab === 'converter'" />
 
       <!-- 页脚 -->
       <div class="mt-6 text-center text-xs text-gray-400">
-        <p>支持键盘快捷键 | 点击结果可复制</p>
+        <p v-if="currentTab === 'basic'">支持键盘快捷键 | 点击结果可复制</p>
+        <p v-else-if="currentTab === 'scientific'">角度模式切换 | 支持内存功能</p>
+        <p v-else-if="currentTab === 'financial'">贷款计算 | 复利计算 | ROI分析</p>
+        <p v-else-if="currentTab === 'converter'">支持8大类别单位换算</p>
       </div>
     </div>
   </div>
@@ -53,6 +50,9 @@
 <script setup>
 import { ref } from 'vue'
 import BasicCalculator from './components/BasicCalculator.vue'
+import ScientificCalculator from './components/ScientificCalculator.vue'
+import FinancialCalculator from './components/FinancialCalculator.vue'
+import ConverterCalculator from './components/ConverterCalculator.vue'
 
 const currentTab = ref('basic')
 
