@@ -36,7 +36,8 @@ export default defineConfig({
   },
   
   // GitHub Pages 部署配置
-  // 如果部署到 GitHub Pages，需要设置 base 为仓库名
-  // Vercel 不需要设置 base
-  base: process.env.GITHUB_PAGES ? '/smart-calculator/' : '/'
+  // 必须设置 base 为仓库名，否则资源路径会错误
+  // 如果部署到根域名，改为 '/'
+  // 如果部署到 Vercel，可以改为 '/'
+  base: '/smart-calculator/'
 })
